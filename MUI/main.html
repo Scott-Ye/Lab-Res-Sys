@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+
+		<style>
+			/* //第一处：我从这里修改上下宽距 */
+			a {
+				top: 1000px;
+				bottom: 1000px;
+			}
+			//这里结束（好像没有用）
+			ul {
+				font-size: 14px;
+				color: #8f8f94;
+			}
+			.mui-btn {
+				padding: 10px;
+			}
+		</style>
+	</head>
+<!-- //从这里开始修改 -->
+	<body>
+		<header class="mui-bar mui-bar-nav" style="padding-right: 15px;">
+			<!-- //我从这里添加pop菜单 -->
+			<a href="#popover" id="openPopover" class=" mui-pull-left" style="position:relative;left:8px;top:11px;"/>菜单</a> <!-- // href 定义锚点 -->
+			<!-- //阶段一结束 -->
+			<h1 class="mui-title">华南理工大学实验室预约系统</h1>
+			<button id='setting' class=" mui-pull-right mui-btn-link">设置</button>
+		</header>
+		<div class="mui-content">
+			
+			<!-- //这是pop菜单里的内容 -->
+			<div id="popover" class="mui-popover"> <!-- //id 对应锚点 -->
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell"><a href="#main">为什么看不到我啊！</a></li>
+					<li class="mui-table-view-cell"><a href="#">守则</a></li>
+					<li class="mui-table-view-cell"><a href="#">Item3</a></li>
+					<li class="mui-table-view-cell"><a href="#">Item4</a></li>
+					<li class="mui-table-view-cell"><a href="#">Item5</a></li>
+				</ul>
+			</div>
+			<!-- //不知道为什么看不见 -->
+			
+			<div class="mui-content-padded">
+				<p>
+					您好 <span id='account'></span>，您已成功登录。
+				</p>
+				<!--<button  class="mui-btn mui-btn-block mui-btn-primary">设置</button>-->
+				<!--
+				<button id='exit' class="mui-btn mui-btn-block mui-btn-green">关闭</button>
+                <button id='logout' class="mui-btn mui-btn-red mui-btn-block">注销登录</button>
+                -->
+			</div>
+			
+			<!-- //我从这里加实验室消息 -->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<!-- （超链接） -->
+						<img class="mui-media-object mui-pull-left" src="images/huagong.png">
+						<div class="mui-media-body">
+							实验室消息
+							<p class="mui-ellipsis">
+								消息一
+							</p>
+						</div>
+					<!-- </a> -->
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<!-- （超链接） -->
+						<img class="mui-media-object mui-pull-left" src="images/huagong.png">
+						<div class="mui-media-body">
+							实验室消息
+							<p class="mui-ellipsis">
+								消息二
+							</p>
+						</div>
+					<!-- </a> -->
+				</li>
+			</ul>
+			<!-- //这里结束 -->
+			<!-- 加上<a #>（超链接）就显示不了图片和文字了 -->
+			
+			<!-- //我从这里加功能 -->
+			<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				<div class="mui-scroll" id="functions">
+			        <a class="mui-control-item mui-active" >
+						预约功能
+			        </a>
+			        <a class="mui-control-item">
+			            功能1
+			        </a>
+			        <a class="mui-control-item">
+			            功能2
+			        </a>
+			        <a class="mui-control-item">
+			            功能3
+			        </a>
+			        <a class="mui-control-item">
+			            功能4
+			        </a>
+			        <a class="mui-control-item">
+			            功能5
+			        </a>
+			    </div>
+			</div>
+			
+			<!-- 我从这里加滑动周数 -->
+			<div class="mui-slider">
+				<!--选项卡标题区-->
+				<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				  <a class="mui-control-item" href="#item1">第十三周</a>
+				  <a class="mui-control-item" href="#item2">第十四周</a>
+				  <a class="mui-control-item" href="#item3">第十五周</a>
+				</div>
+				<div class="mui-slider-progress-bar mui-col-xs-4">
+				</div>
+				<div class="mui-slider-group">
+				  <!--第一个选项卡内容区-->
+					<div id="item1" class="mui-slider-item mui-control-content mui-active">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell"><span class="mui-navigate-right">周一</span></li>
+							<li class="mui-table-view-cell">周二<span class="mui-badge mui-badge-green">2 available</span></li>
+							<li class="mui-table-view-cell">周三<span class="mui-badge mui-badge-red">2 available</span></li>
+							<li class="mui-table-view-cell"><span class="mui-navigate-right">周四</span></li>
+							<li class="mui-table-view-cell"><span class="mui-navigate-right">周五</span></li>
+							<li class="mui-table-view-cell"><span class="mui-navigate-right">周六</span></li>
+							<li class="mui-table-view-cell"><span class="mui-navigate-right">周日</span></li>
+						</ul>
+					</div>
+				  <!--第二个选项卡内容区，页面加载时为空-->
+					<div id="item2" class="mui-slider-item mui-control-content">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell"><span class="mui-navigate-right">周一</span></li>
+							<li class="mui-table-view-cell"><span class="mui-navigate-right">周二</span></li>
+							<li class="mui-table-view-cell"><span class="mui-navigate-right">周三</span></li>
+							<li class="mui-table-view-cell"><span class="mui-navigate-right">周四</span></li>
+							<li class="mui-table-view-cell"><span class="mui-navigate-right">周五</span></li>
+							<li class="mui-table-view-cell"><span class="mui-navigate-right">周六</span></li>
+							<li class="mui-table-view-cell"><span class="mui-navigate-right">周日</span></li>
+						</ul>
+					</div>
+				  <!--第三个选项卡内容区，页面加载时为空-->
+					<div id="item3" class="mui-slider-item mui-control-content">
+					</div>
+				</div>
+			</div>
+			<!-- 这里结束 -->
+		
+		<!-- 我从这里加底部选项卡(模板) -->
+		<!-- 没什么用，所以去掉了 -->
+		<!-- 这里结束 -->
+		
+		<script src="js/mui.min.js">
+		</script>
+		<script src="js/app.js">
+		</script>
+		<script>
+			(function($, doc) {
+				$.init();
+				var settings = app.getSettings();
+				var account = doc.getElementById('account');
+				//
+				window.addEventListener('show', function() {
+					var state = app.getState();
+					account.innerText = state.account;
+				}, false);
+				$.plusReady(function() {
+					var settingPage = $.preload({
+						"id": 'setting',
+						"url": 'setting.html'
+					});
+					//设置
+					var settingButton = doc.getElementById('setting');
+					//settingButton.style.display = settings.autoLogin ? 'block' : 'none';
+					settingButton.addEventListener('tap', function(event) {
+						$.openWindow({
+							id: 'setting',
+							show: {
+								aniShow: 'pop-in'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					});
+					//--
+					$.oldBack = mui.back;
+					var backButtonPress = 0;
+					$.back = function(event) {
+						backButtonPress++;
+						if (backButtonPress > 1) {
+							plus.runtime.quit();
+						} else {
+							plus.nativeUI.toast('再按一次退出应用');
+						}
+						setTimeout(function() {
+							backButtonPress = 0;
+						}, 1000);
+						return false;
+					};
+				});
+			}(mui, document));
+		</script>
+		
+		<!-- 以下的javascript是我手动加的 -->
+		<script type="text/javascript" charset="utf-8">
+			//我从这里调整mainPage样式
+			mui.init({
+				url:'main.html',
+				id:'main',
+				styles:{
+					top:'0px',
+					bottom:'0px'
+				}
+			});
+			//这里结束（好像不行）
+			// 我从这里预加载
+			mui.init({
+				preloadPages:[{
+					url : "reserve.html",
+					id : "reserve.html"
+				}]
+			});
+			
+			function reserve(){
+				mui.openWindow({
+					url : "reserve.html",
+					id : "reserve.html"
+				});
+			}
+			//这里结束（因为没直接效果，不知道是否有用）
+			//我从这里进行表格窗口传递
+			mui.init();
+			
+			var menu=document.getElementById('popover');
+			var table=document.getElementById('item1');
+			var line=document.getElementById('functions');
+			
+			menu.onclick = function(){
+				
+				mui.openWindow({
+					url:'Regulations.html',
+					id:'Regulations',
+					styles:{
+						top:'0px',
+						bottom:'0px'
+					}
+				})
+			}
+			
+			table.onclick = function(){
+				
+				mui.openWindow({
+					url:'weekdays.html',
+					id:'weekdays',
+					styles:{
+						top:'0px',
+						bottom:'0px'
+					}
+				})
+			}
+			
+			line.onclick = function(){
+				
+				mui.openWindow({
+					url:'reserve.html',
+					id:'reserve',
+					styles:{
+						top:'0px',
+						bottom:'0px'
+					}
+				})
+			}
+			//这里结束
+		</script>
+	</body>
+</html>
